@@ -5,21 +5,31 @@ using namespace std;
 int main()
 {
     string str;
-    int w=0,j=0,m=0,z=0,b=0,r=0;
+    int arr[123],ch,sum=0,result;
+
     cin>>str;
 
     int len = str.length();
-    int count = 0;
+
+
+    arr[120] = 0;
 
     for(int i=0; i< len; i++){
-        for(int j=i+1; j<len; j++){
-            if(str[i] == str[j]){
-                count++;
-            }
-        }
+        ch = str[i];
+        arr[ch] = 1;
+        
     }
 
-    int result = len-count;
+    for(int i=97; i< 123; i++){
+
+        if(arr[i] == 1){
+            sum += arr[i];
+        }
+        
+    }
+
+    result = sum;
+
 
     if(result%2 == 0 ){
         cout<<"CHAT WITH HER!\n";
