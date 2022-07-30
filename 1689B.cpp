@@ -23,29 +23,64 @@ int main()
         }
         sort(arr2, arr2 + store);
 
+        int arr3[n];
+
         int count = 0;
+        int f = 0;
         for (int i=0; i< n; i++)
         {
+            if(arr[i] != arr2[i]){
+                arr3[f] = arr2[i];
+                f++;
+            }
+        }
+
+        int len_arr3 = sizeof(arr3) / sizeof(arr[0]);
+
+        for (int i = len_arr3; i < n; i++)
+        {
             if(arr[i] == arr2[i]){
-                count++;
+                arr3[f] = arr2[i];
+                f++;
             }
-        }
-        if(count == n){
-            for (int i = 1; i < n; i++)
-            {
-                cout<<arr2[i]<<" ";
-            }
-            cout<<arr2[0]<<endl;
             
         }
-        else{
-            for (int i = 0; i < n-1; i++)
-            {
-                cout<<arr2[i]<<" ";
-            }
-            cout<<arr2[n-1]<<endl;
+
+        for (int i = 0; i < n; i++)
+        {
+            cout<<arr3[i]<<" ";
             
         }
+        
+        
+
+        cout<<endl;
+        
+
+
+
+
+
+
+
+
+
+        // if(count == n){
+        //     for (int i = 1; i < n; i++)
+        //     {
+        //         cout<<arr2[i]<<" ";
+        //     }
+        //     cout<<arr2[0]<<endl;
+            
+        // }
+        // else{
+        //     for (int i = 0; i < n-1; i++)
+        //     {
+        //         cout<<arr2[i]<<" ";
+        //     }
+        //     cout<<arr2[n-1]<<endl;
+            
+        // }
 
         
     }

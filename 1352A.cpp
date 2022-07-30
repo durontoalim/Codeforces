@@ -1,21 +1,17 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
-
+	
 int main()
 {
     int N;
+    cin>>N;
 
-    int *p;
-
-    N = 10;
-
-    p = &N;
-
-    cout<<p<<endl;
-
-    
+    while(N--){
+        int n;
+        cin>>n;
+        
+    }
 
     return 0;
 }

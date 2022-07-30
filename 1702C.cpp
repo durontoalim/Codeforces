@@ -7,37 +7,40 @@ int main()
     int N;
     cin>>N;
     while(N--){
-        int x,y;
+        long long int x,y;
         cin>>x>>y;
-        int arr[x];
+        long long int arr[x];
+        
         for (int i = 0; i < x; i++)
         {
             cin>>arr[i];
+            
         }
+        
+        
 
         for (int i = 0; i < y; i++)
         {
-            int t= 0;
-            int f=0,f2=0;
-            int a,b;
+            int index_1 = x , index_2 = -1;
+
+            long long int a,b;
             cin>>a>>b;
 
-            for (int i = 0; i < x; i++)
-            {
-                if(arr[i] == a){
-                    if(t == 1){
-                        continue;
+            for(int j=0; j < x ; j++){
+
+                if(index_1 == x){
+                    if(arr[j] == a) {
+                        index_1 = j;
+
                     }
-                    f = i;
-                    t++;
                 }
-                if(arr[i] == b && t == 1){
-                   
-                    f2 = i;
-                    break;
-                }
+
+                if(arr[j] == b){
+                    index_2 = j;
+                } 
             }
-            if(f < f2){
+
+            if(index_1 < index_2){
                 cout<<"YES\n";
             }
             else cout<<"NO\n";
