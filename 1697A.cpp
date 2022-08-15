@@ -13,11 +13,15 @@ int main()
         int arr[a];
         for(int i=0; i< a; i++){
             cin>>arr[i];
-            if(arr[i] == b && i > 0){
-                sum += arr[i-1] + arr[i];
-            }
+            sum += arr[i];
         }
-        cout<<sum<<endl;
+
+        int result = sum - b;
+
+        if(result < 0){
+            cout<<"0"<<endl;
+        }
+        else cout<<result<<endl;
     }
 
     return 0;
