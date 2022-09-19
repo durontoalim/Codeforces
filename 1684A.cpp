@@ -54,32 +54,25 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int main()
 {
-    string str;
-    
-    while (getline(cin,str))
+    FastIO();
+
+    int N;
+    cin>>N;
+
+    while (N--)
     {
-        
+        string str;
+        cin>>str;
+
         int len = str.length();
 
-        int t = 0;
-        for (int i = 0; i < len; i++)
-        {
-            
-
-            if(str[i] == ' ' ){
-                continue;
-            }
-            t++;
-
-            if(t%2 == 1 && (str[i] >= 'a' && str[i] <= 'z' ) ){
-                char ch = str[i] - 32;
-                str[i] = ch;
-            }
-            else if(t%2 == 1 && )
+        if(len == 2) {
+            cout<<str[1]<<endl;
+            continue;
         }
-        cout<<str<<endl;
+
+        cout<<*min_element(all(str))<<endl;
     }
-    
     
  
 }

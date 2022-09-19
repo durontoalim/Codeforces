@@ -54,32 +54,35 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int main()
 {
-    string str;
-    
-    while (getline(cin,str))
+    FastIO();
+
+
+    int N;
+    cin>>N;
+
+    int crime = 0;
+    int sum = 0;
+
+    for (int i = 0; i < N; i++)
     {
+        int n;
+        cin>>n;
+
         
-        int len = str.length();
-
-        int t = 0;
-        for (int i = 0; i < len; i++)
-        {
-            
-
-            if(str[i] == ' ' ){
-                continue;
-            }
-            t++;
-
-            if(t%2 == 1 && (str[i] >= 'a' && str[i] <= 'z' ) ){
-                char ch = str[i] - 32;
-                str[i] = ch;
-            }
-            else if(t%2 == 1 && )
+        if(n>0){
+            sum += n;
         }
-        cout<<str<<endl;
+        else{
+            if(sum < 1){
+                crime++;
+            }
+            else{
+                --sum;
+            }
+        }
     }
-    
+
+    cout<<crime<<endl;
     
  
 }

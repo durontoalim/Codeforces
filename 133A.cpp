@@ -54,31 +54,26 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int main()
 {
+    FastIO();
+
     string str;
-    
-    while (getline(cin,str))
+
+    getline(cin,str);
+
+    int len = str.length();
+
+    int count = 0;
+
+    for (int i = 0; i < len; i++)
     {
-        
-        int len = str.length();
-
-        int t = 0;
-        for (int i = 0; i < len; i++)
-        {
-            
-
-            if(str[i] == ' ' ){
-                continue;
-            }
-            t++;
-
-            if(t%2 == 1 && (str[i] >= 'a' && str[i] <= 'z' ) ){
-                char ch = str[i] - 32;
-                str[i] = ch;
-            }
-            else if(t%2 == 1 && )
+        if(str[i] == 'H' || str[i] == 'Q' || str[i] == '9'){
+            count++; temp = 1;  // HQ9
+            break;
         }
-        cout<<str<<endl;
     }
+
+    if(count > 0) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
     
     
  

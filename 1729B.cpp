@@ -54,30 +54,57 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int main()
 {
-    string str;
-    
-    while (getline(cin,str))
+    FastIO();
+
+    int N;
+    cin>>N;
+
+    while (N--)
     {
-        
+        int n;
+        cin>>n;
+
+        string str;
+        cin>>str;
         int len = str.length();
 
-        int t = 0;
         for (int i = 0; i < len; i++)
         {
-            
-
-            if(str[i] == ' ' ){
+            string str2;
+                str2[0] = str[i];
+                str2[1] = str[i+1];
+               
+               
+            if(str[i] == '1' && str[i+1] == '0'){
+                cout<<"j";
+                i += 2;
                 continue;
             }
-            t++;
+            else if(str[i+2] == '0' && i < len-2 && str[i+3] != '0'){
+                int nnn = stoi(str2);
+               char chh = nnn+96;
 
-            if(t%2 == 1 && (str[i] >= 'a' && str[i] <= 'z' ) ){
-                char ch = str[i] - 32;
-                str[i] = ch;
+
+
+               cout<<chh;
+
+                i += 2;
+                continue;
             }
-            else if(t%2 == 1 && )
+
+            char c = str[i];
+            int num = c-49;
+
+            char ch = num+97;
+
+            
+
+            cout<<ch;
         }
-        cout<<str<<endl;
+
+        cout<<endl;
+        
+        
     }
     
     
