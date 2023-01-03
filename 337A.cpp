@@ -4,20 +4,31 @@ using namespace std;
 
 int main()
 {
-    int N;
+    
     int a,b;
     cin>>a>>b;
 
-    int arr[b];
+    vector<int> v;
 
     for (int i = 0; i < b; i++)
     {
-        cin>>arr[i];
+        int x;
+        cin>>x;
+        v.push_back(x);
     }
     
-    sort(arr, arr+a);
+    sort(v.begin(), v.end());
 
-    cout<<arr[a-1]-arr[0]<<endl;
+    int check = v[b-1]-v[0];
+    int t;
+    for (int i = a; i <= b; i++)
+    {
+        t = abs(v[i-1]-v[i-a]);
+        check = min(check,t);
+    }
+
+    cout<<check<<endl;
+    
     
 
 

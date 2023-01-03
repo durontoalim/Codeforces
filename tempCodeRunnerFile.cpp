@@ -1,10 +1,11 @@
 #include<bits/stdc++.h>
-
+#define int long long
 using namespace std;
- 
  
 typedef long long ll;
 typedef vector<int> vi;
+typedef vector<int>::iterator vit;
+typedef set<int>::iterator sit;
 typedef vector<ll> vl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl; 
@@ -14,7 +15,7 @@ typedef pair<ll, ll> pll;
 typedef vector<pi> vipi;
 typedef vector<pll> vll;
 typedef double dl;
- 
+
 #define endl '\n'
 #define PB push_back
 #define MP make_pair
@@ -52,55 +53,15 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 
 
-int main()
+int32_t main()
 {
-    FastIO();
-
     int N;
     cin>>N;
 
-    int arr[N];
-
-    int one = 0, two = 0, three = 0, four = 0;
-    int result = 0;
-
-    for (int i = 0; i < N; i++)
+    while (N--)
     {
-        cin>>arr[i];
-        if(arr[i] == 1) one++;
-        if(arr[i] == 2) two++;
-        if(arr[i] == 3) three++;
-        if(arr[i] == 4) four++;
+       
     }
-
-    result += four;
-
-    result += three;
-
-    one = one - three;
-    if(one < 0) one = 0;
-
-    if(two % 2 == 0){
-        result += (two/2);
-
-        two = 0; 
-    }
-    else{
-        two = (two/2) + 1;
-        result += two;
-
-        one -= 2;
-
-        if(one < 0) one = 0;
-    }
-
-    one = ceil(one / 4.00);
-
-    result += one;
-
-    cout<<result<<endl;
-
-
 
     return 0;
     

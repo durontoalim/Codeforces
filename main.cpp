@@ -1,10 +1,11 @@
 #include<bits/stdc++.h>
-
+#define int long long
 using namespace std;
- 
  
 typedef long long ll;
 typedef vector<int> vi;
+typedef vector<int>::iterator vit;
+typedef set<int>::iterator sit;
 typedef vector<ll> vl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl; 
@@ -52,10 +53,16 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 
 
-int main()
+int32_t main()
 {
-    
-    
+    int N;
+    cin>>N;
+
+    while (N--)
+    {
+       
+    }
+
     return 0;
     
  

@@ -47,25 +47,28 @@ int main(){
     int n;
     cin>>n;
     int sub_n = n;
-    int arr[n];
+    
+    vector<int> v;
     
     for (int i = 0; i < n ; i++)
     {
-        cin>>arr[i];
+        int x;
+        cin>>x;
+        v.push_back(x);
     }
 
-    int sum  = arr[0];
+    int sum  = 0;
 
-    if(n == 1){
-        sum = 0;
-    }
+    // if(n == 1){
+    //     cout<<"0"<<endl;
+    //     return 0;
+    // }
+
+    sort(v.begin(), v.end());
 
     for (int i = 0; i < n-1 ; i++)
     {
-        if(arr[i] < arr[i+1]){
-            sum += arr[i+1];
-        }
-        else break;
+        sum += v[n-1] - v[i];
     }
 
     cout<<sum<<endl;

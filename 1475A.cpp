@@ -6,7 +6,7 @@ typedef long long ll;
 #define endl "\n"
 int main()
 {
-    int N;
+    ll N;
     cin>>N;
 
     while (N--)
@@ -14,8 +14,8 @@ int main()
         ll a;
         cin>>a;
 
-        if(a % 2 != 0 || (a%3 == 0) || (a%5 == 0) || (a%7 == 0) || (a%9 == 0)) cout<<"YES"<<endl;
-        else cout<<"NO"<<endl;
+        if( (a&(a-1) ) == 0) cout<<"NO"<<endl;
+        else cout<<"YES"<<endl;
     }
     
 

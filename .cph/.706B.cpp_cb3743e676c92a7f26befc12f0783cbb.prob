@@ -1,0 +1,1 @@
+{"name":"Local: 706B","url":"d:\\Coder\\proGramming\\Competitive Programming\\Codeforces\\706B.cpp","tests":[{"id":1671094932666,"input":"5\n3 10 8 6 11\n4\n1\n10\n3\n11","output":"0\n4\n1\n5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coder\\proGramming\\Competitive Programming\\Codeforces\\706B.cpp","group":"local","local":true}
