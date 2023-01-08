@@ -55,7 +55,11 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int32_t main()
 {
-    
+    double R;
+    cin>>R;
+    cout<<fixed<<setprecision(9)<<3.141592653*pow(R,2)<<endl;
+
+
     return 0;
     
  

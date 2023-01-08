@@ -55,7 +55,11 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int32_t main()
 {
-    
+    int N,M;
+    cin>>N>>M;
+
+    cout<<N%10+M%10<<endl;
+
     return 0;
     
  

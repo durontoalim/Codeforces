@@ -55,7 +55,43 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int32_t main()
 {
+    int N;
+    cin>>N;
     
+    while (N--)
+    {
+        vi v;
+       int n,k;
+       cin>>n>>k;
+
+       for (int i = 0; i < n; i++)
+       {
+         int x; cin>>x;
+         v.push_back(x);
+       }
+        int cnt = 0,t = 0;
+       for(int i = 0; i < n-1; i++){
+            if(v[i] > v[i+1]) cnt++;
+       }
+        int check = 1;
+       for(int i = 0; i < n; i++){
+            if(check == v[i]){
+                t++;
+                check++;
+            }
+       }
+       if(cnt == 0) { 
+            cout<<0<<endl;
+            continue;
+       }
+        int result = n-t;
+       if(result  % k == 0 ) cout<<result /k<<endl;
+       else{
+            cout<< result / k + 1<<endl;
+       }
+       
+    }
+
     return 0;
     
  

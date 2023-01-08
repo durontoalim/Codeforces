@@ -55,7 +55,13 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int32_t main()
 {
-    
+    int N,X;
+    cin>>N>>X;
+
+    cout<<N<<" + "<<X<<" = "<<N+X<<endl;
+    cout<<N<<" * "<<X<<" = "<<N*X<<endl;
+    cout<<N<<" - "<<X<<" = "<<N-X<<endl;
+
     return 0;
     
  

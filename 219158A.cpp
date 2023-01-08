@@ -55,7 +55,11 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int32_t main()
 {
-    
+    string str;
+    cin>>str;
+
+    cout<<"Hello, "<<str<<endl;
+
     return 0;
     
  

@@ -55,7 +55,13 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int32_t main()
 {
-    
+    int N,n;
+    char ch;
+    double d,dd;
+    cin>>N>>n>>ch>>d>>dd;
+
+    cout<<N<<endl<<n<<endl<<ch<<endl<<fixed<<setprecision(2)<<d<<endl<<fixed<<setprecision(1)<<dd<<endl;
+
     return 0;
     
  

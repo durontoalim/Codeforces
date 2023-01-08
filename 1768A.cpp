@@ -55,7 +55,16 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int32_t main()
 {
-    
+    int N;
+    cin>>N;
+
+    while (N--)
+    {
+       int n;
+       cin>>n;
+       cout<<n-1<<endl;
+    }
+
     return 0;
     
  

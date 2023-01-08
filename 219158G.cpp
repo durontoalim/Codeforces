@@ -55,7 +55,11 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int32_t main()
 {
-    
+    int N;
+    cin>>N;
+
+    cout<<(N*(N+1))/2<<endl;
+
     return 0;
     
  

@@ -55,7 +55,12 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int32_t main()
 {
-    
+    int A,B,C,D;
+    cin>>A>>B>>C>>D;
+
+    int X = (A*B)-(C*D);
+    cout<<"Difference = "<<X<<endl;
+
     return 0;
     
  

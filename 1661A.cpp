@@ -55,7 +55,44 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int32_t main()
 {
-    
+    int N;
+    cin>>N;
+
+    while (N--)
+    {
+       int n; cin>>n;
+       vi v; vi v2;
+       int sum = 0;
+       for (int i = 0 ; i < n; i++)
+       {
+        /* code */
+            int xx; cin>>xx;
+            v.push_back(xx);
+       }
+       for (int i = 0 ; i < n; i++)
+       {
+        /* code */
+            int yy; cin>>yy;
+            v2.push_back(yy);
+       }
+       for (int i = 0; i < n; i++)
+       {
+         if(v[i] < v2[i]) swap(v[i],v2[i]);
+       }
+       for (int i = 1; i < n; i++)
+       {
+          sum += abs(v[i-1]-v[i]);
+       }
+       for (int i = 1; i < n; i++)
+       {
+          sum += abs(v2[i-1]-v2[i]);
+       }
+       
+
+       cout<<sum<<endl;
+       
+    }
+
     return 0;
     
  
