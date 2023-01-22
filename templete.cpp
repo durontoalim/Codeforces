@@ -55,6 +55,10 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 int32_t main()
 {
+    int n;
+    cin>>n;
+
+    cout<<sqrt(n)<<endl;
     
     return 0;
     
