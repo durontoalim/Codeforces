@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define int long long
 using namespace std;
  
@@ -15,7 +15,7 @@ typedef pair<ll, ll> pll;
 typedef vector<pi> vipi;
 typedef vector<pll> vll;
 typedef double dl;
-
+ 
 #define endl '\n'
 #define PB push_back
 #define MP make_pair
@@ -50,22 +50,28 @@ ll lcm ( ll a, ll b ) { return a * ( b / gcd ( a, b ) ); }
  
 int dx[] = { 0, 0, +1, -1, -1  +1, -1, +1 };
 int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
-
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
-typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update> indexed_set;
-
-
-
+ 
 int32_t main()
 {
-    int n;
-    cin>>n;
-
-    cout<<sqrt(n)<<endl;
-    
-    return 0;
-    
+    int n; cin>>n;
  
+    while (n--)
+    {
+        int a,b,c;
+        cin>>a>>b>>c;
+        int z = a-1;
+        int mod = c%z;
+        for (int i = 0; i <a-1; i++)
+        {
+            if(mod > 0){
+                cout<<(c/z)+1<<" ";
+                mod = mod - 1;
+            }
+            else cout<<c/z<<" ";
+        }
+        cout<<b-c<<endl;
+    }
+    
+	
+	return 0;
 }

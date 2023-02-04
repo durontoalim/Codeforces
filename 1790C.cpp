@@ -1,14 +1,14 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define int long long
 using namespace std;
- 
+
 typedef long long ll;
 typedef vector<int> vi;
 typedef vector<int>::iterator vit;
 typedef set<int>::iterator sit;
 typedef vector<ll> vl;
 typedef vector<vi> vvi;
-typedef vector<vl> vvl; 
+typedef vector<vl> vvl;
 typedef pair<int,int> pi;
 typedef pair<double, double> pdd;
 typedef pair<ll, ll> pll;
@@ -51,21 +51,47 @@ ll lcm ( ll a, ll b ) { return a * ( b / gcd ( a, b ) ); }
 int dx[] = { 0, 0, +1, -1, -1  +1, -1, +1 };
 int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
-typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update> indexed_set;
-
-
-
 int32_t main()
 {
-    int n;
-    cin>>n;
+    int N; cin>>N;
 
-    cout<<sqrt(n)<<endl;
-    
-    return 0;
-    
- 
+    while (N--)
+    {
+        int n; cin>>n;
+        int arr[n+10][n+10];
+        int flag, utin = -10;
+        int utissy = -10;
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n-1; j++)
+            {
+                cin>>arr[i][j];
+            }
+        }
+        for (int i = 0; i < n; i++)
+        {
+            flag = 0;
+            for (int j = 0; j < n; j++)
+            {
+                if(i==j) continue;
+                if(arr[i][1] == arr[j][0]){
+                    utin = i;
+                    utissy = j;
+                    flag = 1;
+                    break;
+                }
+            }
+            if(flag == 1){
+                break;
+            } 
+        }
+        cout<<arr[utin][0]<<" ";
+        for (int i = 0; i < n-1; i++)
+        {
+            cout<<arr[utissy][i]<<" ";
+        }
+        cout<<endl;
+    }
+
+	return 0;
 }

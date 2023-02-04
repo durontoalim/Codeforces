@@ -51,19 +51,29 @@ ll lcm ( ll a, ll b ) { return a * ( b / gcd ( a, b ) ); }
 int dx[] = { 0, 0, +1, -1, -1  +1, -1, +1 };
 int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
-typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update> indexed_set;
-
 
 
 int32_t main()
 {
     int n;
     cin>>n;
+    vector<int>v;
+    while(n--){
+        int x; cin>>x;
+        v.push_back(x);
+    }
 
-    cout<<sqrt(n)<<endl;
+    for (int i = 0; i < v.size(); i++)
+    {
+        if(v[i]%2 == 1){
+            cout<<"-1"<<endl;
+        }
+        else{
+            int t = v[i]/2;
+            cout<<1<<" "<<t<<endl;
+        }
+    }
+    
     
     return 0;
     
