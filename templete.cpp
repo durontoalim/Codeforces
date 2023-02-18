@@ -16,6 +16,8 @@ typedef vector<pi> vipi;
 typedef vector<pll> vll;
 typedef double dl;
 
+#define case "Case "
+#define semicollon ": "
 #define endl '\n'
 #define PB push_back
 #define MP make_pair

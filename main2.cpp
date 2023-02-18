@@ -54,55 +54,38 @@ int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
 
 pi p;
 
-bool check ( pair <pair < string,int >, pair < int,int > > P , pair < pair < string,int>,pair<int,int>>P2)
-{
-    if(P.S.F!=P2.S.F){
-        if(p.S.F>p2.S.F)return true;
-        else return false;
-    }
-    else{
-        if(a.first.second!=b.first.second){
-            if(a.first.second>b.first.second)return true;
-            else return false;
-        }
-        else{
-            if(a.first.first!=b.first.first){
-                if(a.first.first<b.first.first)return true;
-                else return false;
-            }
-            else{
-                if(a.second.second!=b.second.second){
-                    if(a.second.second<b.second.second)return true;
-                    else return false;
-                }
-                else return false;
-            }
-        }
-    }
+// bool check ( pair <pair < string,int >, pair < int,int > > P , pair < pair < string,int>,pair<int,int>>P2)
+// {
+//     if(P.S.F!=P2.S.F){
+//         if(p.S.F>p2.S.F)return true;
+//         else return false;
+//     }
+//     else{
+//         if(a.first.second!=b.first.second){
+//             if(a.first.second>b.first.second)return true;
+//             else return false;
+//         }
+//         else{
+//             if(a.first.first!=b.first.first){
+//                 if(a.first.first<b.first.first)return true;
+//                 else return false;
+//             }
+//             else{
+//                 if(a.second.second!=b.second.second){
+//                     if(a.second.second<b.second.second)return true;
+//                     else return false;
+//                 }
+//                 else return false;
+//             }
+//         }
+//     }
 
-}
+// }
 
 
 int32_t main()
 {
-    int t;
-    cin >> t;
-    while(t--){
-        int n,i,j;
-        cin >> n;
-
-        vector<pair< pair<string,int> , pair<int,int> >>v;
-
-        for(i=0; i<n; i++){
-            int math,eng,roll;
-            string name;
-            cin >> name >> math >> eng >> roll;
-            v.push_back(make_pair(make_pair(name,math) , make_pair(eng,roll)));
-        }
-        sort(all(v),check);
-        for(i=0; i<v.size(); i++){
-            cout << v[i].first.first << ' ' << v[i].first.second << ' ' << v[i].second.first << ' ' << v[i].second.second << endl;
-        }
-    }
+    cout<<9999999999999999%10<<endl;
+    cout<<(9999999999999999/10)*25 + 25<<endl;
     return 0;
 }
