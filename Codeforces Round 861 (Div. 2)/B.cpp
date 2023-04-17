@@ -93,14 +93,42 @@ void alim( T arg, const hello &... rest) {
                 alim(rest...);
 }
 
-/*
---------------MAIN CODE---------
-*/
-
+int cnt;
 int test_case;
 
 int utin()
 {
+    int l,r; cin>>l>>r;
+
+    vector< vector<int> > v(l);
+
+    for (int i = 0; i < l; i++)
+    {
+        for (int j = 0; j < r; j++)
+        {
+            int x; cin>>x;
+            v[i].push_back(x);
+        }
+    }
+    int sum = 0, result = 0;
+    int tt = 0;
+    while(tt < l){
+        
+
+    }
+    for (int i = 1; i < l; i++)
+    {
+        for (int j = 0; j < r; j++)
+        {
+            int subs = abs( v[i-1][j] - v[i][j]);
+            sum += subs;
+
+            cout<<"Subs : "<<subs<<" sum : "<<sum<<endl;
+        }
+        
+    }
+
+    cout<<sum<<endl;
     
    
     return 0;

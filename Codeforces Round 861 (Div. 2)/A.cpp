@@ -93,14 +93,45 @@ void alim( T arg, const hello &... rest) {
                 alim(rest...);
 }
 
-/*
---------------MAIN CODE---------
-*/
-
+int cnt;
 int test_case;
 
 int utin()
 {
+    int l,r; cin>>l>>r;
+    int chk = r;
+    int high = -1;
+    int result;
+
+    while (l <= chk)
+    {
+        int sub = chk;
+        vector<int>v;
+        while (sub > 0)
+        {
+            int temp = sub %10;
+            v.push_back(temp);
+            
+            sub /= 10;
+        }
+        
+        int mx = *max_element(v.begin(), v.end());
+        int mn = *min_element(v.begin(), v.end());
+
+        int subs = mx-mn;
+
+
+        if(high < subs){
+            high = subs;
+            result = chk;
+        }
+
+        if(mx == 9 && mn == 0) break;
+
+        chk--;
+        
+    }
+    cout<<result<<endl;
     
    
     return 0;

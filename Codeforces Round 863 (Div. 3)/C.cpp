@@ -93,14 +93,31 @@ void alim( T arg, const hello &... rest) {
                 alim(rest...);
 }
 
-/*
---------------MAIN CODE---------
-*/
+int cnt;
 
 int test_case;
 
 int utin()
 {
+    int n; cin>>n;
+    int arr[n+1];
+    for (int i = 0; i < n-1; i++)
+    {
+        cin>>arr[i];
+    }
+
+    vector<int>v(n);
+    v[n-1] = arr[n-2];
+    for (int i = 0; i < n-1; i++)
+    {
+        v[i] = min(arr[i], arr[i+1]);
+    }
+    cout<<arr[0]<<" ";
+    for (int i = 0; i < n; i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
     
    
     return 0;

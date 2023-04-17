@@ -93,14 +93,32 @@ void alim( T arg, const hello &... rest) {
                 alim(rest...);
 }
 
-/*
---------------MAIN CODE---------
-*/
+int cnt;
 
 int test_case;
 
 int utin()
 {
+    int string_len; cin>>string_len;
+    string str; cin>>str;
+    int mx = 200;
+    int reserve_index;
+    for (int i = 0; i < string_len; i++)
+    {
+        int x = (int)str[i] - 97;
+        if(mx >= x){
+            reserve_index = i;
+            mx = x;
+        }
+    }
+    cout<<str[reserve_index];
+    for (int i = 0; i < string_len; i++)
+    {
+        if(reserve_index == i) continue;
+        cout<<str[i];
+    }
+    cout<<endl;
+    
     
    
     return 0;

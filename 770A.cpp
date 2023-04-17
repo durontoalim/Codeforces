@@ -93,14 +93,31 @@ void alim( T arg, const hello &... rest) {
                 alim(rest...);
 }
 
-/*
---------------MAIN CODE---------
-*/
+int cnt;
 
 int test_case;
 
 int utin()
 {
+    int a,b; cin>>a>>b;
+    int cnt = 97;
+    int x = 1;
+    for (int i = 0; i < a; i++)
+    {
+        if(x > b){
+            cnt = 97;
+            x = 1;
+            
+        }
+        char ch = cnt;
+        cout<<ch;
+        
+         cnt++;
+        
+
+        x++;
+    }
+    cout<<endl;
     
    
     return 0;
@@ -108,12 +125,7 @@ int utin()
 
 int32_t main()
 {
-    FastIO();
-    cin>>test_case;
-    while (test_case--)
-    {
-        utin();
-    }
+    utin();
 
     return 0;
 }

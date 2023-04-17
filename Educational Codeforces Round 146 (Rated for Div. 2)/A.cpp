@@ -93,15 +93,26 @@ void alim( T arg, const hello &... rest) {
                 alim(rest...);
 }
 
-/*
---------------MAIN CODE---------
-*/
+int cnt;
 
 int test_case;
 
 int utin()
 {
-    
+    int a,b; cin>>a>>b;
+    if(a == b){
+        cout<<"yes"<<endl;
+        return 0;
+    }
+    int bol = a%2;
+    int bol2 = b%2;
+
+    if(bol == 1 && bol2 == 0){
+        cout<<"no"<<endl;
+        return 0;
+    }
+
+    cout<<"yes"<<endl;
    
     return 0;
 }

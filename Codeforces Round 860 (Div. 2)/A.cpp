@@ -93,14 +93,49 @@ void alim( T arg, const hello &... rest) {
                 alim(rest...);
 }
 
-/*
---------------MAIN CODE---------
-*/
-
+int cnt;
 int test_case;
 
 int utin()
 {
+    int n; cin>>n;
+    vi v1;
+    vi v2;
+
+    for (int i = 0; i < n; i++)
+    {
+        int x; cin>>x;
+        v1.PB(x);
+    }
+    for (int i = 0; i < n; i++)
+    {
+        int x; cin>>x;
+        v2.PB(x);
+    }
+
+    
+
+    // if(v1[n-1] <= mx1 && v2[n-1] <= mx2){
+
+    // }
+
+    for (int i = 0; i < n; i++)
+    {
+        if(v2[i] <= v1[i] ){
+            swap(v1[i],v2[i]);
+        }
+    }
+
+    int mx1 = *max_element(v1.begin(), v1.end());
+    int mx2 = *max_element(v2.begin(), v2.end());
+    
+
+    if(v1[n-1] == mx1 && v2[n-1] == mx2){
+        cout<<"Yes"<<endl;
+    }
+    else{
+        cout<<"No"<<endl;
+    }
     
    
     return 0;

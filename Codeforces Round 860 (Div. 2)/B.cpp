@@ -93,16 +93,62 @@ void alim( T arg, const hello &... rest) {
                 alim(rest...);
 }
 
-/*
---------------MAIN CODE---------
-*/
-
+int cnt;
 int test_case;
 
 int utin()
 {
+    int n; cin>>n;
+    vector< vector<int> > v(n);
+    bool bol;
+    for (int i = 0; i < n; i++)
+    {
+        int x; cin>>x;
+        for (int j = 0; j < x; j++)
+        {
+            int xx; cin>>xx;
+            v[i].PB(xx);
+        }
+    }
+    if(n == 1){
+        cout<<v[0][0]<<endl;
+        return 0;
+    }
+    for (int i = 0; i < n; i++)
+    {
+        int flag = 1;
+        for (int j = 0; j < v[i].size(); j++)
+        {
+            bol = true;
+            vector<int>::iterator it;
+            for (int k = i+1; k < n; k++)
+            {
+                it = find(v[k].begin(), v[k].end(), v[i][j]);
+
+                if(it != v[k].end()){
+                    bol = false;
+                    break;
+                }
+            }
+
+            // if(i == n-1){
+            //     cout<<v[n-1][0]<<endl;
+            //     break;
+            // }
+            if(bol){
+                cout<<v[i][j]<<" ";
+                flag = 0;
+                break;
+            }
+        }
+
+        if(flag){
+            cout<< -1;
+            break;
+        }
+    }
+    cout<<endl;
     
-   
     return 0;
 }
 

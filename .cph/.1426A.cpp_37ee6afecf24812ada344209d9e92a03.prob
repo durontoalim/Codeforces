@@ -1,0 +1,1 @@
+{"name":"Local: 1426A","url":"d:\\Coder\\proGramming\\Competitive Programming\\Codeforces\\1426A.cpp","tests":[{"id":1679776456415,"input":"4\n7 3\n1 5\n22 5\n987 13","output":"1 2\n3 4 5\n6 7 8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coder\\proGramming\\Competitive Programming\\Codeforces\\1426A.cpp","group":"local","local":true}
